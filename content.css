@@ -1,0 +1,135 @@
+/* ==========================================================================
+   Google NotebookLM RTL Chat & Persian Typography (v1.6.0 - Perfect RTL Layout)
+   ========================================================================== */
+
+/* Load Google Vazirmatn Font */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap');
+
+/* --- Target ONLY Chat Text Elements for RTL --- */
+.nlm-chat-rtl {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: plaintext !important;
+}
+
+/* Paragraphs & Headings - Clean right alignment matching container padding */
+.nlm-chat-rtl p,
+.nlm-chat-rtl blockquote,
+.nlm-chat-rtl h1, .nlm-chat-rtl h2, .nlm-chat-rtl h3,
+.nlm-chat-rtl h4, .nlm-chat-rtl h5, .nlm-chat-rtl h6 {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: plaintext !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* --- List & Nested Sub-list Alignment (Flips LTR padding-left to RTL padding-right) --- */
+ul.nlm-chat-rtl,
+ol.nlm-chat-rtl,
+.nlm-chat-rtl ul,
+.nlm-chat-rtl ol {
+  direction: rtl !important;
+  text-align: right !important;
+  padding-left: 0 !important;
+  padding-right: 1.5rem !important; /* Standard right padding for bullets */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Sub-lists (Nested lists indents) */
+.nlm-chat-rtl ul ul,
+.nlm-chat-rtl ol ol,
+.nlm-chat-rtl ul ol,
+.nlm-chat-rtl ol ul {
+  padding-left: 0 !important;
+  padding-right: 1.2rem !important; /* Clean sub-bullet indentation in RTL */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+li.nlm-chat-rtl,
+.nlm-chat-rtl li {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: plaintext !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-bottom: 0.35rem !important;
+}
+
+/* --- Input & Textarea Elements --- */
+textarea[dir="rtl"],
+input[dir="rtl"] {
+  direction: rtl !important;
+  text-align: right !important;
+  unicode-bidi: plaintext !important;
+}
+
+/* --- Keep Icons & Material Glyphs Intact --- */
+mat-icon,
+.material-symbols-outlined,
+.material-icons,
+svg,
+svg *,
+[class*="icon"] {
+  direction: ltr !important;
+}
+
+/* --- IMPORTANT EXCEPTION: Keep Code & Technical Blocks LTR --- */
+pre, code, kbd, samp, .code-block, [class*="code"], [class*="highlight"], .katex, .math-display {
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: normal !important;
+}
+
+/* --- Floating RTL Badge On Page --- */
+#nlm-rtl-floating-badge {
+  position: fixed !important;
+  bottom: 16px !important;
+  left: 16px !important;
+  z-index: 999999 !important;
+  background: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #3b82f6 !important;
+  border-radius: 20px !important;
+  padding: 6px 14px !important;
+  font-family: 'Vazirmatn', sans-serif !important;
+  font-size: 12px !important;
+  direction: rtl !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease !important;
+  user-select: none !important;
+}
+
+#nlm-rtl-floating-badge:hover {
+  background: #2563eb !important;
+  transform: scale(1.04) !important;
+}
+
+#nlm-rtl-floating-badge .dot {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #10b981 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 8px #10b981 !important;
+}
+
+#nlm-rtl-floating-badge.disabled {
+  border-color: #64748b !important;
+  background: #0f172a !important;
+  color: #94a3b8 !important;
+}
+
+#nlm-rtl-floating-badge.disabled .dot {
+  background-color: #64748b !important;
+  box-shadow: none !important;
+}

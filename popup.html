@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تنظیمات راست‌چین NotebookLM</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-title">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6H20M4 12H16M4 18H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M18 15L21 12L18 9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="title-text">
+          <h1>راست‌چین NotebookLM</h1>
+          <span class="version">نسخه ۱.۶.۰</span>
+        </div>
+      </div>
+      <!-- Toggle Master Switch -->
+      <label class="switch" title="فعال / غیرفعال‌سازی افزونه">
+        <input type="checkbox" id="master-enable" checked>
+        <span class="slider round"></span>
+      </label>
+    </header>
+
+    <main class="content" id="main-settings">
+      <!-- Mode Selection Section -->
+      <section class="section">
+        <h2 class="section-title">حالت راست‌چین‌سازی</h2>
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="mode" value="auto" id="mode-auto" checked>
+            <div class="radio-content">
+              <span class="radio-label">تشخیص هوشمند (Auto)</span>
+              <span class="radio-desc">راست‌چین‌سازی خودکار متون فارسی و عربی</span>
+            </div>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="mode" value="force_rtl" id="mode-force">
+            <div class="radio-content">
+              <span class="radio-label">راست‌چین اجباری (Force RTL)</span>
+              <span class="radio-desc">همیشه تمام متون چت راست‌چین شوند</span>
+            </div>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="mode" value="ltr" id="mode-ltr">
+            <div class="radio-content">
+              <span class="radio-label">چپ‌چین (LTR)</span>
+              <span class="radio-desc">حفظ حالت پیش‌فرض چپ‌چین به انگلیسی</span>
+            </div>
+          </label>
+        </div>
+      </section>
+
+      <!-- Target Scope Section -->
+      <section class="section">
+        <h2 class="section-title">محدوده اعمال</h2>
+        <div class="select-wrapper">
+          <select id="target-scope" class="custom-select">
+            <option value="chat_only" selected>فقط بخش چت (Chat Window)</option>
+            <option value="all_notebook">کل برنامه (چت + یادداشت‌ها)</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Options Toggles -->
+      <section class="section">
+        <h2 class="section-title">تنظیمات فونت و تایپوگرافی</h2>
+        <div class="setting-row">
+          <div class="setting-info">
+            <span class="setting-name">فونت فارسی وزیرمتن (Vazirmatn)</span>
+            <span class="setting-desc">بهبود خوانایی متون چت فارسی</span>
+          </div>
+          <label class="switch small">
+            <input type="checkbox" id="font-vazirmatn" checked>
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Status & GitHub Developer Credit -->
+    <footer class="footer">
+      <div class="status-indicator active" id="status-badge">
+        <span class="dot"></span>
+        <span id="status-text">فعال در چت NotebookLM</span>
+      </div>
+
+      <a href="https://github.com/AmirGhz-2030" target="_blank" rel="noopener noreferrer" class="github-link" title="صفحه گیت‌هاب توسعه‌دهنده">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>AmirGhz-2030</span>
+      </a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
